@@ -1,0 +1,45 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $background-color;
+  box-shadow: 1px 2px 3px 1px rgba(136, 136, 136, 0.226);
+  z-index: 100;
+  
+  nav.navbar {
+    @include flex;
+    @include flexSpaceAround;
+    @include flexAlignCenter;
+    padding: 1rem 0;
+
+    .logo {
+      a {
+        font-weight: bolder;
+        color: $text-color-light-black;
+        font-size: 1.5rem;
+        color: blue;
+
+        span {
+          color: $logo-color;
+          font-size: 2rem;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .menu--item {
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+}

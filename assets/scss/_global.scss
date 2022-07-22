@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap');
+
+$background-color: #fff;
+$text-color-white: #fff;
+$text-color-black: rgb(0, 0, 0);
+$logo-color: rgb(255, 72, 72);
+$cart-btn-color: rgb(248, 82, 4);
+$text-color-light-black: rgba(70, 70, 70, 0.568);
+$font-family: 'Quicksand', sans-serif;
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-600: 600;
+
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: $font-family;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  scroll-padding: 2rem;
+}
+
+%grid {
+  display: grid;
+}
+
+@mixin grid {
+  display: grid;
+}
+
+@mixin gridColumn {
+  @extend %grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr))
+}
+
+@mixin gridGap {
+  @extend %grid;
+  gap: 1.5rem;
+}
+
+%flex {
+  display: flex;
+}
+
+@mixin flex {
+  @extend %flex;
+}
+
+@mixin flexColumn {
+  @extend %flex;
+  flex-direction: column;
+}
+
+@mixin flexCenter {
+  @extend %flex;
+  justify-content: center;
+}
+
+@mixin flexSpaceBetween {
+  @extend %flex;
+  justify-content: space-between;
+}
+
+@mixin flexSpaceAround {
+  @extend %flex;
+  justify-content: space-around;
+}
+
+@mixin flexAlignCenter{
+  @extend %flex;
+  align-items: center;
+}
+
+@mixin mq_max_width($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  background: $background-color;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+#shop--area {
+  max-width: 70%;
+  width: 100%;
+  margin: auto;
+}
